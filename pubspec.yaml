@@ -21,4 +21,7 @@ flutter:
   assets:
     - asset/image/welcome.jpg
     - asset/image/welcome.webp
+    - asset/image/CIE2024.jpg
+    - asset/image/premios.jpg
+    - asset/image/donacion.jpeg
     - asset/document/

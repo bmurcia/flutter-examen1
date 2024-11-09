@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            const Text('Welcome to Flutter News',
+            const Text('CEUTEC NEWS',
                 style: TextStyle(fontSize: 25, color: Colors.black)),
             const SizedBox(height: 70),
             Padding(
