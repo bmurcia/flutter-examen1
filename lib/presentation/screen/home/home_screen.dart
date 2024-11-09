@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_examen1/presentation/screen/home/widgets/main_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,21 +11,22 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Examen 1 Bryan Murcia'),
       ),
       body: Container(
-        color: Colors.black,
+        color: Colors.white,
         child: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             const Text('Welcome to Flutter News',
-                style: TextStyle(fontSize: 25, color: Colors.white)),
+                style: TextStyle(fontSize: 25, color: Colors.black)),
             const SizedBox(height: 70),
             Padding(
-              padding: const EdgeInsets.only(left: 2),
+              padding: const EdgeInsets.only(),
               child: Image.asset('asset/image/welcome.jpg'),
             ),
           ],
         )),
       ),
+      drawer: const MainMenu(),
     );
   }
 }
