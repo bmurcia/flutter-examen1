@@ -31,54 +31,65 @@ class NewsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Noticias"),
       ),
-      body: ListView.builder(
-        itemCount: eventos.length,
-        itemBuilder: (context, index ){
-          final evento = eventos[index];
+      body: Column(
+        children: [
+          Image.network(
+            "https://ceutec.hn/wp-content/uploads/2023/04/logo-ceutec-retina.png",
+            fit: BoxFit.cover,
+          ),
+          Expanded(
+            child: ListView.builder(
+            itemCount: eventos.length,
+            itemBuilder: (context, index ){
+              final evento = eventos[index];
+              
+              return Card(
+                margin: const EdgeInsets.all(10),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        evento['eventName']!,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      Image.asset(
+                        evento['url']!,
+                        fit: BoxFit.cover,
+                      ),
           
-          return Card(
-            margin: const EdgeInsets.all(10),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    evento['eventName']!,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  Image.asset(
-                    evento['url']!,
-                    fit: BoxFit.cover,
-                  ),
-
-                  const SizedBox(height: 5),
-
-                  Text(
-                    'Fecha : ${evento['date']}',
-                    style: const TextStyle(color: Colors.blue),
-                  ),
-                  const SizedBox(height: 5),
-
-                  Text(
-                    '${evento['details']}',
-                    style: const TextStyle(color: Colors.blue),
-                  ),
-                  const SizedBox(height: 5),
-
-
-
-                ],
-              ), 
-            ),
-          );
-
-        },
+                      const SizedBox(height: 5),
+          
+                      Text(
+                        'Fecha : ${evento['date']}',
+                        style: const TextStyle(color: Colors.blue),
+                      ),
+                      const SizedBox(height: 5),
+          
+                      Text(
+                        '${evento['details']}',
+                        style: const TextStyle(color: Colors.blue),
+                      ),
+                      const SizedBox(height: 5),
+          
+          
+          
+                    ],
+                  ), 
+                ),
+              );
+          
+            },
+          ),
+          )
+          
+        ],
       ),
     );
   }
