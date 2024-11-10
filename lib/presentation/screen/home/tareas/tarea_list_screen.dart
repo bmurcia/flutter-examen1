@@ -7,10 +7,10 @@ class TareaListScreen extends StatefulWidget {
   const TareaListScreen({super.key});
 
   @override
-  _TareaListScreenState createState() => _TareaListScreenState();
+  TareaListScreenState createState() => TareaListScreenState();
 }
 
-class _TareaListScreenState extends State<TareaListScreen> {
+class TareaListScreenState extends State<TareaListScreen> {
   late TareaRepositoryImpl _tareaRepository;
   late Future<List<Tarea>> _tareasFuture;
 
