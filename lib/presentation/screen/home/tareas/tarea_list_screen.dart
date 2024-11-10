@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../data/datasources/tarea_service.dart';
-import '../../../../data/repositories/tarea_repository_impl.dart';
-import '../../../../domain/entities/tarea.dart';
+import '../../../../domain/service/tarea_service.dart';
+import '../../../../domain/repository/tarea_repository_impl.dart';
+import '../../../../domain/model/tarea.dart';
 
 class TareaListScreen extends StatefulWidget {
   const TareaListScreen({super.key});

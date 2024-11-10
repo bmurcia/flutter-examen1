@@ -1,6 +1,6 @@
-import '../../domain/entities/tarea.dart';
-import '../../domain/repositories/tarea_repository.dart';
-import '../datasources/tarea_service.dart';
+import '../model/tarea.dart';
+import 'tarea_repository.dart';
+import '../service/tarea_service.dart';
 
 class TareaRepositoryImpl implements TareaRepository {
   final TareaService _tareaService;

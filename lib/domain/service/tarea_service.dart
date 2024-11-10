@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import '../../domain/entities/tarea.dart';
+import '../model/tarea.dart';
 
 class TareaService {
   Future<List<Tarea>> cargarTareas() async {
