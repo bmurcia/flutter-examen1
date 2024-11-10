@@ -4,7 +4,7 @@ import '../../domain/entities/tarea.dart';
 
 class TareaService {
   Future<List<Tarea>> cargarTareas() async {
-    final String response = await rootBundle.loadString('assets/tareas.json');
+    final String response = await rootBundle.loadString('asset/tareas.json');
     final List<dynamic> data = json.decode(response);
 
     return data.map((tareaJson) => Tarea.fromJson(tareaJson)).toList();
