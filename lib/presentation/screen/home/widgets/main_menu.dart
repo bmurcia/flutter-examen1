@@ -28,12 +28,6 @@ class MainMenu extends StatelessWidget {
               context.push('/news');
             },
           ),
-          ListTile(
-            title: const Text('Tareas'),
-            onTap: () {
-              context.push('/tareas');
-            },
-          ),
         ],
       ),
     );
