@@ -27,7 +27,13 @@ class MainMenu extends StatelessWidget {
             onTap: () {
               context.push('/news');
             },
-          )
+          ),
+          ListTile(
+            title: const Text('Tareas'),
+            onTap: () {
+              context.push('/tareas');
+            },
+          ),
         ],
       ),
     );

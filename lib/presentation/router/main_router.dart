@@ -11,5 +11,9 @@ final mainRouter = GoRouter(initialLocation: '/', routes: [
   GoRoute(
     path: '/news',
     builder:(context, tate) => const NewsScreen(), 
+  ),
+  GoRoute(
+    path: '/tareas',
+    builder:(context, tate) => const TareaListScreen(), 
   )
 ]);

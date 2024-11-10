@@ -19,6 +19,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - asset/tareas.json
     - asset/image/welcome.jpg
     - asset/image/welcome.webp
     - asset/image/CIE2024.jpg
